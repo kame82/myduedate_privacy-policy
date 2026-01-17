@@ -1,0 +1,91 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f3ee;
+  --card: #ffffff;
+  --text: #1d1b16;
+  --muted: #6a6356;
+  --accent: #c0392b;
+  --border: #e3dccf;
+  --shadow: rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP",
+    "Times New Roman", serif;
+  background: radial-gradient(circle at top, #fff7e9, var(--bg));
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.page {
+  max-width: 900px;
+  margin: 48px auto 80px;
+  padding: 0 20px;
+}
+
+.page__header {
+  background: var(--card);
+  padding: 28px 28px 24px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.brand {
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem);
+}
+
+.date {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.policy {
+  margin-top: 32px;
+  padding: 24px 26px;
+  background: var(--card);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.policy h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.policy h3 {
+  margin-bottom: 6px;
+  margin-top: 18px;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.policy p {
+  margin: 0 0 10px;
+}
+
+@media (max-width: 640px) {
+  .page {
+    margin: 32px auto 56px;
+  }
+
+  .page__header,
+  .policy {
+    padding: 20px;
+  }
+}
